@@ -13,13 +13,13 @@ public class SqMaxTest {
 
     @Test
     public void whenSecondMax() {
-        int result = SqMax.max(2, 4, 2, 1);
+        int result = SqMax.max(2, 4, 2, 3);
         assertThat(result, is(4));
     }
 
     @Test
     public void whenThirdMax() {
-        int result = SqMax.max(4, 1, 9, 2);
+        int result = SqMax.max(1, 2, 9, 2);
         assertThat(result, is(9));
     }
 
