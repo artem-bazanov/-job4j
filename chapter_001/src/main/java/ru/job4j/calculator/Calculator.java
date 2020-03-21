@@ -8,6 +8,7 @@ package ru.job4j.calculator;
  */
 public class Calculator {
     /**
+     * add - операция сложения первого аргумента с вторым
      * @param first - первый аргумент
      * @param second - второй аргумент
      * @return result - результат
@@ -16,14 +17,32 @@ public class Calculator {
         double result =  first + second;
         System.out.println(first + " + " + second + " = " + result);
     }
+    /**
+     * div - операция деления первого аргумента на второй
+     * @param first - первый аргумент
+     * @param second - второй аргумент
+     * @return result - результат
+     */
     public static void div(double first, double second) {
         double result = first / second;
         System.out.println(first + " / " + second + " = " + result);
     }
+    /**
+     * multiply - операция умножения первого аргумента на второй
+     * @param first - первый аргумент
+     * @param second - второй аргумент
+     * @return result - результат
+     */
     public static void multiply(double first, double second) {
         double result = first * second;
         System.out.println(first + " * " + second + " = " + result);
     }
+    /**
+     * subtrack - операция вычитания первого элемента из второго
+     * @param first - первый аргумент
+     * @param second - второй аргумент
+     * @return result - результат
+     */
     public static void subtrack(double first, double second) {
         double result = first - second;
         System.out.println(first + " - " + second + " = " + result);
