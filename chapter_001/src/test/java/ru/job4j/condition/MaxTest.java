@@ -16,9 +16,19 @@ public class MaxTest {
         assertThat(result, is(4));
     }
     @Test
-    public void whenMax2To2Then2() {
+    public void whenMax2To2Then22() {
         int result = Max.max(6, 6);
         assertThat(result, is(6));
+    }
+    @Test
+    public void whenMax2To2Then23() {
+        int result = Max.max(6, 4, 2);
+        assertThat(result, is(6));
+    }
+    @Test
+    public void whenMax2To2Then24() {
+        int result = Max.max(6, 2, 3, 9);
+        assertThat(result, is(9));
     }
 
 }
