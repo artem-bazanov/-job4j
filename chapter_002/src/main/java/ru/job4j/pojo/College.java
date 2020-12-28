@@ -8,6 +8,8 @@ public class College {
         student.setGroup("1-РИ2020");
         student.setAdmission(new Date());
 
-        System.out.println("Student name - " + student.getName() + System.lineSeparator() + "Group - " + student.getGroup() + System.lineSeparator() + "Receipt date - " + student.getAdmission());
+        System.out.println("Student name - " + student.getName() + System.lineSeparator() +
+                "Group - " + student.getGroup() + System.lineSeparator() +
+                "Receipt date - " + student.getAdmission());
     }
 }
