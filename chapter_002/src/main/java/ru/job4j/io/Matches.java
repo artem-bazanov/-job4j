@@ -4,28 +4,24 @@ import java.util.Scanner;
 
 public class Matches {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         int number = 11;
-        String player1 = "Игрок 1";
-        String player2 = "Игрок 2";
-        String winner = "";
-        while (number > 0 ){
-            System.out.println("На столе " + number + " спичек, " + player1 + ", вытяните от 1 до 3");
+        boolean player = true;
+        Scanner input = new Scanner(System.in);
+        while (number > 0) {
+            System.out.println("На столе " + number + " спичек, вытяните от 1 до 3");
             int select = Integer.parseInt(input.nextLine());
-            if (select > 0 && select < 4){
-                number = number - select;
-                winner = player1;
+            player = !player;
+            if (select < 1 || select > 3) {
+                System.out.println("Вы ввели неверное число, можно вытянуть от 1 до 3 спичек ");
+                continue;
             }
-            System.out.println("На столе " + number + " спичек, " + player2 + ", вытяните от 1 до 3");
-            int select1 = Integer.parseInt(input.nextLine());
-            if (select1 > 0 && select1 < 4){
-                number = number - select1;
-                winner = player2;
-            }
-            else {
-                System.out.println("Вы ввели неверное число, можно вытянуть от 1 до 3 спичек");
-            }
+            number -= select;
+            System.out.println();
         }
-        System.out.println("Игра окончена, победил " + winner);
+        if (player) {
+            System.out.println("Победил первый игрок!");
+        } else {
+            System.out.println("Победил второй игрок!");
+        }
     }
 }
